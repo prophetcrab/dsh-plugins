@@ -1,0 +1,53 @@
+name: Refresh market index
+
+on:
+  schedule:
+    # Every six hours, offset from the top of the hour.
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'market/plugins.txt'
+      - 'tools/market-generator/**'
+      - '.github/workflows/refresh-index.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: tools/market-generator/package-lock.json
+
+      - name: Install the generator
+        working-directory: tools/market-generator
+        run: npm ci
+
+      - name: Regenerate the index
+        working-directory: tools/market-generator
+        run: |
+          npx tsx src/bin.ts \
+            --input ../../market/plugins.txt \
+            --output ../../docs/index.json \
+            --title "Crab's DSH plugins" \
+            --description "Personal DeepSeek Harness plugins: MCP server monitor, live preview, role-play tavern, and the evoverse agent world."
+
+      - name: Commit a changed index
+        run: |
+          if git diff --quiet -- docs/index.json; then
+            echo "Index is already current."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/index.json
+          git commit -m "chore: refresh market index"
+          git push

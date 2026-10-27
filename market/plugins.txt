@@ -1,4 +1,5 @@
-# Git repositories: every bundle package the generator finds is listed.
-https://github.com/prophetcrab/dsh-plugins
+# Each plugin lives in its own repository; this list only names them.
+https://github.com/prophetcrab/dsh-mcp-monitor
+https://github.com/prophetcrab/dsh-live-preview
 https://github.com/prophetcrab/DSHTavern
 https://github.com/prophetcrab/evoverse

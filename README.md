@@ -48,6 +48,22 @@ Manual install: add the package as a profile dependency and activate its bundle 
 }
 ```
 
+## Regenerating the index
+
+The index is produced by the official generator from a DSH source checkout:
+
+```sh
+cd /path/to/deepseek-harness
+node --import tsx/esm apps/plugin-market-generator/src/bin.ts \
+  --input /path/to/dsh-plugins/market/plugins.txt \
+  --output /path/to/dsh-plugins/docs/index.json \
+  --title "Crab's DSH plugins" \
+  --description "Personal DeepSeek Harness plugins: MCP server monitor and live preview."
+```
+
+Then commit `docs/index.json`. Versions come from the packages' `version` fields on `main` (or from
+`vX.Y.Z` / `<name>@X.Y.Z` tags), so bump a plugin version, push, and regenerate to publish an update.
+
 ## Repository layout
 
 ```

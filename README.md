@@ -13,6 +13,7 @@ Add it in Settings → Plugins → Discover (or in your profile's `plugin-market
 |---|---|---|
 | `dsh-mcp-monitor` | Read-only inventory of configured MCP servers: connection state and registered tools | [dsh-mcp-monitor](https://github.com/prophetcrab/dsh-mcp-monitor) |
 | `dsh-live-preview` | Right-sidebar live preview of a web page, or live frames of a running native window | [dsh-live-preview](https://github.com/prophetcrab/dsh-live-preview) |
+| `dsh-github-trending` | Daily GitHub trending briefing: overall leaderboard, per-domain hotspots, model summary | [dsh-github-trending](https://github.com/prophetcrab/dsh-github-trending) |
 | `dshtavern` | Role-play tavern: a director picks who speaks, each character answers from its own card | [DSHTavern](https://github.com/prophetcrab/DSHTavern) |
 | `evoverse` | Agent world self-evolution engine, built as a DSH plugin | [evoverse](https://github.com/prophetcrab/evoverse) |
 

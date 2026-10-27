@@ -1,7 +1,7 @@
 {
   "format": 1,
   "title": "Crab's DSH plugins",
-  "description": "Personal DeepSeek Harness plugins: MCP server monitor, live preview, role-play tavern, and the evoverse agent world.",
+  "description": "Personal DeepSeek Harness plugins: MCP server monitor, live preview, role-play tavern, the evoverse agent world, and a daily GitHub trending briefing.",
   "plugins": [
     {
       "name": "dsh-mcp-monitor",
@@ -190,6 +190,46 @@
             "type": "git",
             "url": "https://github.com/prophetcrab/evoverse",
             "commit": "0dcd1d8a3a213809085e9e3816d3d9e02b699a9c"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.2 <0.3.0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-github-trending",
+      "title": {
+        "en": "GitHub trending",
+        "zh": "GitHub 每日热点"
+      },
+      "description": {
+        "en": "Daily trending briefing: an overall leaderboard and per-domain hotspots, summarized by the model.",
+        "zh": "每日 GitHub 热点简报：总榜 + 子领域热点，并附模型总结。"
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJHaXRIdWIgdHJlbmRpbmciPgogIDxyZWN0IHg9IjQiIHk9IjQiIHdpZHRoPSI1NiIgaGVpZ2h0PSI1NiIgcng9IjE0IiBmaWxsPSIjMGYxZjJlIi8+CiAgPHBhdGggZD0iTTEzIDQ1IDI1IDMxbDkgOCAxNy0yMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjN2VlMGE4IiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogIDxwYXRoIGQ9Ik0zOSAxN2gxMnYxMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjN2VlMGE4IiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogIDxjaXJjbGUgY3g9IjEzIiBjeT0iNDUiIHI9IjMiIGZpbGw9IiNlOGZmZjIiLz4KICA8Y2lyY2xlIGN4PSIyNSIgY3k9IjMxIiByPSIzIiBmaWxsPSIjZThmZmYyIi8+CiAgPGNpcmNsZSBjeD0iMzQiIGN5PSIzOSIgcj0iMyIgZmlsbD0iI2U4ZmZmMiIvPgo8L3N2Zz4K",
+      "author": "prophetcrab",
+      "homepage": "https://github.com/prophetcrab/dsh-github-trending#readme",
+      "repository": {
+        "url": "https://github.com/prophetcrab/dsh-github-trending"
+      },
+      "metadata": {
+        "keywords": [
+          "dsh",
+          "dsh-plugin",
+          "github",
+          "trending",
+          "briefing"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "publishTimestamp": 1793071847,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/prophetcrab/dsh-github-trending",
+            "commit": "192b63f7986df28c6de1a7c4d08c202b21dde396"
           },
           "engines": {
             "dsh": ">=0.2.1-rc.2 <0.3.0"

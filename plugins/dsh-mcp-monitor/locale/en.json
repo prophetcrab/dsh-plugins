@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "MCP servers",
+    "description": "Read-only view of the MCP servers configured in this profile: connection state and registered tools."
+  }
+}

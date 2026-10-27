@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "MCP 服务器",
+    "description": "只读查看当前 profile 中配置的 MCP 服务器、连接状态与已注册工具。"
+  }
+}

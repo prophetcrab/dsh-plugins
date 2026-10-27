@@ -1,0 +1,2 @@
+# The repository itself: the generator lists both bundle packages under plugins/.
+https://github.com/prophetcrab/dsh-plugins

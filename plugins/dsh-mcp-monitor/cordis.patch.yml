@@ -1,0 +1,6 @@
+# MCP monitor: a read-only inventory of the MCP servers configured in this
+# profile. The Host row registers the `mcp_servers` tool and one HTTP route;
+# the Client row adds the Settings section that reads the same route.
+- insert:
+    - id: mcp-monitor
+      name: dsh-mcp-monitor

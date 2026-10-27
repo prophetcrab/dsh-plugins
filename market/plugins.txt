@@ -1,2 +1,4 @@
-# The repository itself: the generator lists both bundle packages under plugins/.
+# Git repositories: every bundle package the generator finds is listed.
 https://github.com/prophetcrab/dsh-plugins
+https://github.com/prophetcrab/DSHTavern
+https://github.com/prophetcrab/evoverse

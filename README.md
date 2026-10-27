@@ -16,6 +16,16 @@ Add it in Settings → Plugins → Discover (or in your profile's `plugin-market
 | `dshtavern` | Role-play tavern: a director picks who speaks, each character answers from its own card | [DSHTavern](https://github.com/prophetcrab/DSHTavern) |
 | `evoverse` | Agent world self-evolution engine, built as a DSH plugin | [evoverse](https://github.com/prophetcrab/evoverse) |
 
+## Keeping it current
+
+`.github/workflows/refresh-index.yml` regenerates `docs/index.json` every six hours (and on demand, and when
+`market/plugins.txt` changes), then commits the result. A plugin's new release tag therefore reaches the store
+without any manual step — each plugin repository just needs its own `vX.Y.Z` tag or a version bump on its default
+branch.
+
+The generator itself is vendored under `tools/market-generator/` (see its `NOTICE.md`) so CI does not clone the
+whole DSH workspace.
+
 ## How the index is built
 
 `market/plugins.txt` lists the Git repositories to read. The index is produced by the official

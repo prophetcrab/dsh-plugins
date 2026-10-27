@@ -224,6 +224,18 @@
       },
       "versions": [
         {
+          "version": "0.2.0",
+          "publishTimestamp": 1793072356,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/prophetcrab/dsh-github-trending",
+            "commit": "1a0a44749dcf833ab7afef4ab8aee7548f04e2e9"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.2 <0.3.0"
+          }
+        },
+        {
           "version": "0.1.1",
           "publishTimestamp": 1793072069,
           "source": {

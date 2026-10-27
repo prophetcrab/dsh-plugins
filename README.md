@@ -26,6 +26,11 @@ branch.
 The generator itself is vendored under `tools/market-generator/` (see its `NOTICE.md`) so CI does not clone the
 whole DSH workspace.
 
+## Releasing a plugin update
+
+See [docs/RELEASING.md](docs/RELEASING.md): bump the version, tag `vX.Y.Z`, push, and the workflow picks it up.
+Pushing code without a version bump does not change an already-tagged version in the store.
+
 ## How the index is built
 
 `market/plugins.txt` lists the Git repositories to read. The index is produced by the official

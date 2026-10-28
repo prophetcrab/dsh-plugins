@@ -1,7 +1,7 @@
 {
   "format": 1,
   "title": "Crab's DSH plugins",
-  "description": "Personal DeepSeek Harness plugins: MCP server monitor, live preview, role-play tavern, the evoverse agent world, and a daily GitHub trending briefing.",
+  "description": "Personal DeepSeek Harness plugins: MCP server monitor, live preview, role-play tavern, the evoverse agent world, a daily GitHub trending briefing, and local ComfyUI image generation.",
   "plugins": [
     {
       "name": "dsh-mcp-monitor",
@@ -71,6 +71,18 @@
         ]
       },
       "versions": [
+        {
+          "version": "0.4.2",
+          "publishTimestamp": 1793167647,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/prophetcrab/dsh-live-preview",
+            "commit": "fff791a7b873b161ed1ac719ae09f9a157313063"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.2 <0.3.0"
+          }
+        },
         {
           "version": "0.2.3",
           "publishTimestamp": 1793069946,

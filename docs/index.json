@@ -344,6 +344,47 @@
           }
         }
       ]
+    },
+    {
+      "name": "dsh-comfyui",
+      "title": {
+        "en": "ComfyUI image generation",
+        "zh": "ComfyUI 生图"
+      },
+      "description": {
+        "en": "Local Krea 2 Turbo generation: two presets (artist-style illustration, pixel game asset), prompt optimization, auto-started ComfyUI, and a gallery.",
+        "zh": "本地 Krea 2 Turbo 生图：两个预设（画师风插画 / 像素游戏资产）、提示词优化、自动启动 ComfyUI、独立界面与画廊。"
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJDb21meVVJIj4KICA8cmVjdCB4PSI0IiB5PSI0IiB3aWR0aD0iNTYiIGhlaWdodD0iNTYiIHJ4PSIxNCIgZmlsbD0iIzE1MWIyYiIvPgogIDxyZWN0IHg9IjEzIiB5PSIxNSIgd2lkdGg9IjM4IiBoZWlnaHQ9IjMwIiByeD0iNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZjBhMDIwIiBzdHJva2Utd2lkdGg9IjIuNCIvPgogIDxjaXJjbGUgY3g9IjI0IiBjeT0iMjYiIHI9IjQiIGZpbGw9IiM3ZWUwYTgiLz4KICA8cGF0aCBkPSJNMTUgNDNsMTEtMTIgOCA4IDYtNiA5IDEweiIgZmlsbD0iI2YwYTAyMCIgb3BhY2l0eT0iMC45Ii8+CiAgPHBhdGggZD0iTTIyIDUxaDIwIiBzdHJva2U9IiM3ZWUwYTgiIHN0cm9rZS13aWR0aD0iMi40IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+Cg==",
+      "author": "prophetcrab",
+      "homepage": "https://github.com/prophetcrab/dsh-comfyui#readme",
+      "repository": {
+        "url": "https://github.com/prophetcrab/dsh-comfyui"
+      },
+      "metadata": {
+        "keywords": [
+          "dsh",
+          "dsh-plugin",
+          "comfyui",
+          "flux",
+          "krea",
+          "text-to-image"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.7.0",
+          "publishTimestamp": 1793157699,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/prophetcrab/dsh-comfyui",
+            "commit": "db5d590d59cf48bf65abd9a6890492fafa9b29f7"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.2 <0.3.0"
+          }
+        }
+      ]
     }
   ]
 }

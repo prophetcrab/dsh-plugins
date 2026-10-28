@@ -385,12 +385,12 @@
       },
       "versions": [
         {
-          "version": "0.7.2",
-          "publishTimestamp": 1793161536,
+          "version": "0.7.3",
+          "publishTimestamp": 1793178969,
           "source": {
             "type": "git",
             "url": "https://github.com/prophetcrab/dsh-comfyui",
-            "commit": "4a37e3f04e8cc99538111cbf952dd5029e4658b2"
+            "commit": "d6b05baf9c188058505240c466df1443726d1e80"
           },
           "engines": {
             "dsh": ">=0.2.1-rc.2 <0.3.0"

@@ -436,8 +436,15 @@
     },
     {
       "name": "dsh-team-mode",
-      "title": "dsh-team-mode",
-      "description": "Team mode for DeepSeek Harness: an agent preset that declares an effectively unlimited token budget and pushes delegation-first work through many parallel subagents and teammates.",
+      "title": {
+        "en": "Team mode",
+        "zh": "团队模式"
+      },
+      "description": {
+        "en": "Delegation-first agent preset: token budget set effectively unlimited, with parallel subagents and teammates as the default way of working.",
+        "zh": "以派发为核心的 agent 预设：token 预算视为无上限，默认用大量并行的子代理与队友完成任务。"
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJUZWFtIG1vZGUiPgogIDxyZWN0IHg9IjQiIHk9IjQiIHdpZHRoPSI1NiIgaGVpZ2h0PSI1NiIgcng9IjE0IiBmaWxsPSIjZWVmNGZmIi8+CiAgPGNpcmNsZSBjeD0iMzIiIGN5PSIxOSIgcj0iNyIgZmlsbD0iIzAwN2FmZiIvPgogIDxjaXJjbGUgY3g9IjE4IiBjeT0iNDUiIHI9IjYiIGZpbGw9IiM1YWM4ZmEiLz4KICA8Y2lyY2xlIGN4PSI0NiIgY3k9IjQ1IiByPSI2IiBmaWxsPSIjMzRjNzU5Ii8+CiAgPHBhdGggZD0iTTMyIDI2djdNMzIgMzNsLTEwIDZNMzIgMzNsMTAgNiIgc3Ryb2tlPSIjOGU4ZTkzIiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+Cjwvc3ZnPgo=",
       "author": "prophetcrab",
       "homepage": "https://github.com/prophetcrab/dsh-team-mode#readme",
       "repository": {
@@ -454,6 +461,18 @@
         ]
       },
       "versions": [
+        {
+          "version": "0.1.1",
+          "publishTimestamp": 1793238724,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/prophetcrab/dsh-team-mode",
+            "commit": "d3fa8c929c636916f293ff03dc14974df3f27067"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.2 <0.3.0"
+          }
+        },
         {
           "version": "0.1.0",
           "publishTimestamp": 1793234214,

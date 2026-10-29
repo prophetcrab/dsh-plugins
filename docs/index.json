@@ -1,7 +1,7 @@
 {
   "format": 1,
   "title": "Crab's DSH plugins",
-  "description": "Personal DeepSeek Harness plugins: MCP server monitor, live preview, role-play tavern, the evoverse agent world, a daily GitHub trending briefing, local ComfyUI image generation, and a delegation-first wish mode.",
+  "description": "Personal DeepSeek Harness plugins: MCP server monitor, live preview, role-play tavern, the evoverse agent world, and a daily GitHub trending briefing.",
   "plugins": [
     {
       "name": "dsh-mcp-monitor",

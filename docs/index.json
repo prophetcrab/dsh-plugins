@@ -1,7 +1,7 @@
 {
   "format": 1,
   "title": "Crab's DSH plugins",
-  "description": "Personal DeepSeek Harness plugins: MCP server monitor, live preview, role-play tavern, the evoverse agent world, and a daily GitHub trending briefing.",
+  "description": "Personal DeepSeek Harness plugins: MCP server monitor, live preview, role-play tavern, the evoverse agent world, a daily GitHub trending briefing, local ComfyUI image generation, and a delegation-first team mode.",
   "plugins": [
     {
       "name": "dsh-mcp-monitor",
@@ -427,6 +427,40 @@
             "type": "git",
             "url": "https://github.com/prophetcrab/dsh-comfyui",
             "commit": "db5d590d59cf48bf65abd9a6890492fafa9b29f7"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.2 <0.3.0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-team-mode",
+      "title": "dsh-team-mode",
+      "description": "Team mode for DeepSeek Harness: an agent preset that declares an effectively unlimited token budget and pushes delegation-first work through many parallel subagents and teammates.",
+      "author": "prophetcrab",
+      "homepage": "https://github.com/prophetcrab/dsh-team-mode#readme",
+      "repository": {
+        "url": "https://github.com/prophetcrab/dsh-team-mode"
+      },
+      "metadata": {
+        "keywords": [
+          "dsh",
+          "dsh-plugin",
+          "agent-preset",
+          "team",
+          "delegation",
+          "subagent"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "publishTimestamp": 1793234214,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/prophetcrab/dsh-team-mode",
+            "commit": "6da5d477a1d47b5ec21a5e357b3b6dc47370b170"
           },
           "engines": {
             "dsh": ">=0.2.1-rc.2 <0.3.0"

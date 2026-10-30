@@ -15,6 +15,7 @@ Add it in Settings → Plugins → Discover (or in your profile's `plugin-market
 | `dsh-live-preview` | Right-sidebar live preview of a web page, or live frames of a running native window | [dsh-live-preview](https://github.com/prophetcrab/dsh-live-preview) |
 | `dsh-github-trending` | Daily GitHub trending briefing: overall leaderboard, per-domain hotspots, model summary | [dsh-github-trending](https://github.com/prophetcrab/dsh-github-trending) |
 | `dsh-comfyui` | Local ComfyUI text-to-image: Krea 2 Turbo panel with two presets (artist-style illustration with 15 looks + style LoRAs, true pixel game assets), prompt optimizer, gallery and an `image_generate` chat tool | [dsh-comfyui](https://github.com/prophetcrab/dsh-comfyui) |
+| `dsh-qqbot` | QQ bot control center: one-click NapCat/Koishi setup, live message monitor, group access control, and AI chat with persona cards, long-term memory and image understanding | [dsh-qqbot](https://github.com/prophetcrab/dsh-qqbot) |
 | `dshtavern` | Role-play tavern: a director picks who speaks, each character answers from its own card | [DSHTavern](https://github.com/prophetcrab/DSHTavern) |
 | `evoverse` | Agent world self-evolution engine, built as a DSH plugin | [evoverse](https://github.com/prophetcrab/evoverse) |
 

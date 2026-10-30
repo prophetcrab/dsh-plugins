@@ -6,3 +6,4 @@ https://github.com/prophetcrab/evoverse
 https://github.com/prophetcrab/dsh-github-trending
 https://github.com/prophetcrab/dsh-comfyui
 https://github.com/prophetcrab/dsh-team-mode
+https://github.com/prophetcrab/dsh-qqbot

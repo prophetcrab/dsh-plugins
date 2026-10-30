@@ -38,7 +38,7 @@ jobs:
             --input ../../market/plugins.txt \
             --output ../../docs/index.json \
             --title "Crab's DSH plugins" \
-            --description "Personal DeepSeek Harness plugins: MCP server monitor, live preview, role-play tavern, the evoverse agent world, and a daily GitHub trending briefing."
+            --description "Personal DeepSeek Harness plugins: MCP server monitor, live preview, role-play tavern, the evoverse agent world, a daily GitHub trending briefing, and a QQ bot control center with AI chat and memory."
 
       - name: Commit a changed index
         run: |

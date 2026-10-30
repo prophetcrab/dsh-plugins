@@ -529,6 +529,18 @@
       },
       "versions": [
         {
+          "version": "0.2.2",
+          "publishTimestamp": 1793349791,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/prophetcrab/dsh-qqbot",
+            "commit": "abbca5f336060d7fc55c1c3338de800b0f8b59e7"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.2 <0.3.0"
+          }
+        },
+        {
           "version": "0.2.1",
           "publishTimestamp": 1793347994,
           "source": {

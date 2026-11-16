@@ -59,7 +59,7 @@ interface Release {
 /** Base URL only used to validate relative icon references. */
 const VALIDATION_URL = 'https://index.invalid/index.json'
 /** Part of every cache key; change it when the way entries are derived changes, so cached results are rebuilt. */
-const CACHE_VERSION = 8
+const CACHE_VERSION = 9
 
 /** Why the index format rejects these plugins, or undefined when it accepts them. */
 function invalid(plugins: unknown): string | undefined {
@@ -211,12 +211,16 @@ async function readGit(source: Extract<Source, { kind: 'git' }>, options: Genera
   const warn = (message: string) => { options.warn(`${source.line}: ${message}`) }
   const unitFile = (kind: string, commit: string, path: string) => cache.file(kind, options.inlineIconBytes, source.url, commit, path)
   const plugins = await withGitObjects(source.url, refs, transports, options.limits, async (objects) => {
-    const packages = await headPackages(await objects.tree(refs.head, ''), warn)
+    const headFiles = await objects.tree(refs.head, '')
+    const head = await headPackages(headFiles, () => {}, true)
+    // A platform branch may carry the plugin while the default branch only carries docs (dsh-qqbot does this).
+    // In that case, discover the package from the newest release tag instead of dropping the repository.
+    const packages = head.length > 0 ? head : await tagPackages(objects, tags, warn)
     // Lower ranks win when several commits carry one version: `<name>@` tags, then unified tags, then the default branch.
     const units = [
       ...tags.flatMap(tag => packages.filter(found => tag.name === undefined || tag.name === found.name)
         .map(found => ({ found, commit: tag.commit, version: tag.version, rank: tag.name === undefined ? 1 : 0 }))),
-      ...packages.map(found => ({ found, commit: refs.head, version: undefined, rank: 2 })),
+      ...(head.length === 0 ? [] : head.map(found => ({ found, commit: refs.head, version: undefined, rank: 2 }))),
     ].map(unit => ({ ...unit, file: unitFile('release', unit.commit, unit.found.path) }))
     const cached = new Map(units.map(unit => [unit.file, cache.release(unit.file)]))
     await objects.fetch(units.flatMap(unit => cached.get(unit.file) === undefined ? [unit.commit] : []))
@@ -284,10 +288,35 @@ async function readGit(source: Extract<Source, { kind: 'git' }>, options: Genera
   }
 }
 
-/** Names of the bundle packages on the default branch that are not private, by package directory. */
-async function headPackages(files: PackageFiles, warn: (message: string) => void): Promise<{ path: string; name: string }[]> {
-  const paths = await findBundlePackages(files, warn)
-  if (paths.length === 0) warn('no package declares dsh.bundle')
+/**
+ * Discover bundle packages from the newest release tag when the default branch has none.
+ *
+ * The package layout is intentionally read from the tag commit, not the default branch, so a
+ * docs-only default branch (for example `main`) can still publish a plugin from a platform branch.
+ */
+async function tagPackages(
+  objects: GitObjects, tags: readonly ReleaseTag[], warn: (message: string) => void,
+): Promise<{ path: string; name: string }[]> {
+  const ordered = [...tags].sort((left, right) => semver.rcompare(left.version, right.version))
+  for (const tag of ordered) {
+    try {
+      const packages = await headPackages(await objects.tree(tag.commit, ''), () => {}, true)
+      if (packages.length > 0) {
+        warn(`default branch has no bundle package; using release tag ${tag.tag}`)
+        return packages
+      }
+    } catch (error) {
+      warn(`${tag.tag} skipped while looking for a bundle package: ${(error as Error).message}`)
+    }
+  }
+  warn('no package declares dsh.bundle on the default branch or release tags')
+  return []
+}
+
+/** Names of the bundle packages in a tree that are not private, by package directory. */
+async function headPackages(files: PackageFiles, warn: (message: string) => void, quiet = false): Promise<{ path: string; name: string }[]> {
+  const paths = await findBundlePackages(files, quiet ? () => {} : warn)
+  if (paths.length === 0 && !quiet) warn('no package declares dsh.bundle')
   const packages: { path: string; name: string }[] = []
   let privates = 0
   for (const path of paths) {
